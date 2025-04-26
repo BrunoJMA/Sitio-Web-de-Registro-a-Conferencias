@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Bruno Mejia">
+  <meta name="description" content="Tarea de Comercio electronico">
+  <title>UAM - Inicio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Universidad Americana (UAM)</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="eventos.html">Eventos</a></li>
+      <li><a href="registro.html">Registro</a></li>
+    </ul>
+  </nav>
+  <section class="card">
+    <p>La Universidad Americana, UAM, fue fundada en 1992, por un grupo de catedráticos universitarios de vasta experiencia en el campo docente, investigativo y administrativo, con el propósito de contribuir al desarrollo de la Educación Superior en Nicaragua. El Consejo Nacional de Universidades (CNU) aprobó oficialmente a UAM el 26 de noviembre de 1992, aprobación que confirió el debido reconocimiento nacional e Internacional. Al día de hoy la UAM ofrece 19 carreras en grado y un amplio portafolio en programas de educación continua.</p>
+  </section>
+  <section id="carrusel" class="card">
+    <img src="img/UAMcampus.jpeg" class="slide">
+    <img src="img/uamfuente.jpg" class="slide">
+    <img src="img/uamgente.jpg" class="slide">
+    <img src="img/uampasillo.jpg" class="slide">
+  </section>
+  <section class="card mision-vision">
+    <div>
+      <h2>Visión</h2>
+      <p>Ser una universidad reconocida por su excelencia académica e innovación educativa.</p>
+    </div>
+    <div>
+      <h2>Misión</h2>
+      <p>Formar profesionales íntegros, con pensamiento crítico, ético y humanista.</p>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 Universidad Americana</p>
+  </footer>
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+    showSlides();
+  </script>
+</body>
+</html>
